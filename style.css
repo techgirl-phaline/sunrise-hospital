@@ -1213,6 +1213,27 @@ footer {
         font-size: 28px;
     }
 }
+/* Service Images */
+.service-image-banner {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.service-image {
+    width: 50%;
+}
+
+.service-image img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
        
    
