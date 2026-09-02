@@ -102,6 +102,17 @@ header .container {
     justify-content: space-between;
     align-items: center;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
 
 .logo h1 {
     font-size: 1.5rem;
@@ -163,23 +174,76 @@ nav a.active {
     cursor: pointer;
     color: #1e293b;
 }
+/* ===== OTHER PAGES NAVBAR ===== */
 
+.navbar {
+    background: #ffffff;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 80px;
+}
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0a2e5c;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00a8b5;
+}
 /* ===== HERO ===== */
+
 .hero {
-    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+    background:
+        linear-gradient(
+            rgba(13, 110, 253, 0.35),
+            rgba(11, 94, 215, 0.35)
+        ),
+        url("image/hero photo .jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: #fff;
     padding: 5rem 0;
     min-height: 600px;
+
     display: flex;
     align-items: center;
 }
 
 .hero-overlay {
     width: 100%;
-}
-
-.hero-content {
-    max-width: 600px;
 }
 
 .hero-badge {
@@ -351,8 +415,7 @@ nav a.active {
     color: #475569;
     font-size: 0.95rem;
 }
-
-/* ===== SERVICES PAGE IMAGES ===== */
+/* ===== SERVICES PAGE IMAGE INFORMATION ===== */
 
 .service-image-banner {
     width: 100%;
@@ -365,6 +428,10 @@ nav a.active {
 
 .service-image-banner .service-image {
     width: 50%;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .service-image-banner .service-image img {
@@ -372,8 +439,36 @@ nav a.active {
     height: 300px;
     display: block;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-image-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-image-text h3 {
+    color: #0a2e5c;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.service-image-text p {
+    color: #4a5a7a;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .service-image-banner {
+        flex-direction: column;
+    }
+
+    .service-image-banner .service-image {
+        width: 100%;
+    }
+
 }
 /* ===== WHY CHOOSE ===== */
 .why-choose {
@@ -1121,22 +1216,7 @@ footer {
     font-size: 15px;
     line-height: 1.6;
 }
-.service-image-banner {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 30px;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.service-image-banner img {
-    flex: 1 1 45%;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    max-height: 300px;
-    object-fit: cover;
-}
+
 /* ====================== CONTACT PAGE ======================================== */
 
 .contact-section {
@@ -1240,4 +1320,5 @@ footer {
   
        
    
+
 
